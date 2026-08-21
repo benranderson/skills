@@ -3,7 +3,7 @@
     "owner": {
         "name": "benranderson"
     },
-    "description": "benranderson's personal agent skills, as an installable plugin.",
+    "description": "benranderson's personal agent skills.",
     "plugins": [
         {
             "name": "benranderson-skills",
