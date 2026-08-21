@@ -1,0 +1,23 @@
+{
+    "name": "benranderson-skills",
+    "version": "0.1.0",
+    "description": "Personal agent skills: Obsidian vault lookup/writeup, Minto pyramid writing, OTC abstracts, stripping AI writing tells, and fastpipe calc wiring.",
+    "author": {
+        "name": "benranderson"
+    },
+    "repository": "https://github.com/benranderson/skills",
+    "license": "MIT",
+    "keywords": [
+        "skills",
+        "writing",
+        "obsidian",
+        "productivity"
+    ],
+    "skills": [
+        "./skills/fastpipe-calc-module",
+        "./skills/minto-pyramid",
+        "./skills/obsidian-vault",
+        "./skills/otc-abstract",
+        "./skills/signs-of-ai-writing"
+    ]
+}

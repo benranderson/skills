@@ -1,12 +1,10 @@
 # agent-skills
 
-My personal agent skills.
+My personal agent skills, packaged as an installable plugin.
 
 ## How it works
 
-Agents discover skills in `~/.agents/skills/`, but that folder is also written to by other tools. To keep this repo clean, each skill lives here and is **symlinked** into the discovery folder.
-
-Each skill also has a matching prompt file in `prompts/`, symlinked into the VS Code user prompts folder so it works as a `/slash-command` in chat. The command just delegates to the skill.
+This repo is a plugin. Skills live under `skills/<skill-name>/SKILL.md`, and `.claude-plugin/plugin.json` lists them so the whole set installs as one managed bundle. Installing the plugin discovers every skill and exposes each as a `/slash-command`. No symlinks to maintain.
 
 ## Skills
 
@@ -18,17 +16,10 @@ Each skill also has a matching prompt file in `prompts/`, symlinked into the VS 
 
 ## Install
 
-Symlink all skills and prompt commands into place:
-
-```bash
-./install.sh
-```
-
-Re-run it any time you add a new skill or prompt; it only creates missing links and skips anything already in place. Override targets with `AGENT_SKILLS_DIR` and `VSCODE_PROMPTS_DIR` if your folders are elsewhere.
+Install this repo as a plugin from your agent (for example `npx skills@latest add <owner>/skills`, or clone it into your agent's plugin folder). The plugin manifest handles discovery.
 
 ## Add a skill
 
-1. Create `<skill-name>/SKILL.md` with YAML frontmatter (`name`, `description`) and a Markdown body. Front-load trigger phrases in `description` - that is what makes an agent auto-invoke the skill.
-2. Optionally add `prompts/<skill-name>.prompt.md` to expose it as `/<skill-name>` in chat.
-3. Run `./install.sh`.
-4. Commit.
+1. Create `skills/<skill-name>/SKILL.md` with YAML frontmatter (`name`, `description`) and a Markdown body. Front-load trigger phrases in `description` - that is what makes an agent auto-invoke the skill.
+2. Add `"./skills/<skill-name>"` to the `skills` array in `.claude-plugin/plugin.json`.
+3. Commit.

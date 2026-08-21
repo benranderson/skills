@@ -1,0 +1,20 @@
+{
+    "name": "benranderson",
+    "owner": {
+        "name": "benranderson"
+    },
+    "description": "benranderson's personal agent skills, as an installable plugin.",
+    "plugins": [
+        {
+            "name": "benranderson-skills",
+            "source": "./",
+            "description": "Personal agent skills: Obsidian vault lookup/writeup, Minto pyramid writing, OTC abstracts, stripping AI writing tells, and fastpipe calc wiring.",
+            "category": "productivity",
+            "keywords": [
+                "skills",
+                "writing",
+                "productivity"
+            ]
+        }
+    ]
+}
