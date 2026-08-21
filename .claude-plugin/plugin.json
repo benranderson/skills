@@ -1,7 +1,7 @@
 {
-    "name": "benranderson-skills",
+    "name": "br-skills",
     "version": "0.1.0",
-    "description": "Personal agent skills: Obsidian vault lookup/writeup, Minto pyramid writing, OTC abstracts, stripping AI writing tells, and fastpipe calc wiring.",
+    "description": "Ben Randerson's personal agent skills.",
     "author": {
         "name": "benranderson"
     },
