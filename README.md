@@ -1,10 +1,6 @@
-# agent-skills
+# skills
 
-My personal agent skills, packaged as an installable plugin.
-
-## How it works
-
-This repo is a plugin. Skills live under `skills/<skill-name>/SKILL.md`, and `.claude-plugin/plugin.json` lists them so the whole set installs as one managed bundle. Installing the plugin discovers every skill and exposes each as a `/slash-command`. No symlinks to maintain.
+My personal agent skills.
 
 ## Skills
 
@@ -17,9 +13,3 @@ This repo is a plugin. Skills live under `skills/<skill-name>/SKILL.md`, and `.c
 ## Install
 
 Install this repo as a plugin from your agent (for example `npx skills@latest add <owner>/skills`, or clone it into your agent's plugin folder). The plugin manifest handles discovery.
-
-## Add a skill
-
-1. Create `skills/<skill-name>/SKILL.md` with YAML frontmatter (`name`, `description`) and a Markdown body. Front-load trigger phrases in `description` - that is what makes an agent auto-invoke the skill.
-2. Add `"./skills/<skill-name>"` to the `skills` array in `.claude-plugin/plugin.json`.
-3. Commit.
