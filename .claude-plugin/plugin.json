@@ -16,7 +16,8 @@
     "skills": [
         "./skills/fastpipe-calc-module",
         "./skills/minto-pyramid",
-        "./skills/obsidian-vault",
+        "./skills/obsidian-lookup",
+        "./skills/obsidian-writeup",
         "./skills/otc-abstract",
         "./skills/signs-of-ai-writing"
     ]

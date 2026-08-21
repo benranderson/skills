@@ -4,7 +4,8 @@ My personal agent skills.
 
 ## Skills
 
-- `obsidian-vault` - Read the Obsidian vault for prior guidance, and optionally write up completed work.
+- `obsidian-lookup` - Read the Obsidian vault for prior guidance.
+- `obsidian-writeup` - Capture a write-up of completed work into the Obsidian vault.
 - `minto-pyramid` - Structure business writing answer-first (Minto pyramid).
 - `otc-abstract` - Draft and review Offshore Technology Conference abstracts.
 - `signs-of-ai-writing` - Strip machine-generated tells from prose.
@@ -12,4 +13,4 @@ My personal agent skills.
 
 ## Install
 
-Install this repo as a plugin from your agent (for example `npx skills@latest add <owner>/skills`, or clone it into your agent's plugin folder). The plugin manifest handles discovery.
+Install this repo as a plugin from your agent (for example `npx skills@latest add <owner>/skills`, or clone it into your agent's plugin folder). The plugin manifest handles discovery, and each skill is invocable as its own command.

@@ -1,12 +1,12 @@
 ---
-name: obsidian-vault
-description: Use when a task might have prior notes, conventions, decisions, or worked examples in Ben's Obsidian vault, and to optionally capture a write-up of completed work back into the vault. Covers subsea/pipeline engineering (DNV, PD 8010, lateral/upheaval buckling, VAS, pipe-soil interaction, wall thickness), software/tooling (Python, uv, FastAPI, Azure, packaging), and work processes. Triggers include "check my notes", "have I written about this", "what's my approach to", "add this to my vault", "write this up in Obsidian", or any domain task where prior thinking likely exists.
+name: obsidian-writeup
+description: Use to capture a write-up of completed work into Ben's Obsidian vault. Covers subsea/pipeline engineering (DNV, PD 8010, lateral/upheaval buckling, VAS, pipe-soil interaction, wall thickness), software/tooling (Python, uv, FastAPI, Azure, packaging), and work processes. Triggers include "add this to my vault", "write this up in Obsidian", "capture this in my notes".
 ---
 
-# Obsidian Vault
+# Obsidian Vault Write-up
 
-Read the Obsidian vault for prior guidance, and optionally write completed work
-back into it.
+Capture completed work back into the Obsidian vault. To read prior notes instead,
+use the `obsidian-lookup` skill.
 
 Vault root: `/Users/benranderson/Library/Mobile Documents/iCloud~md~obsidian/Documents/Vault`
 
@@ -31,21 +31,6 @@ Ignore `.trash/`, `.obsidian/`, `.attachments/`, `Attachments/`, `Anki/`.
   of `"[[Wikilink]]"` strings. Some notes also carry `tags:` and `date:`.
 - Body uses `##` section headers and `[[wikilinks]]` to connect topics.
 - Notes are often short stubs: a definition plus links to books, codes, papers.
-
-## Looking things up
-
-1. Start narrow: `grep_search` for 2-3 domain keywords, scoped with
-   `includePattern` to the likely folder (e.g. `Engineering/**`).
-2. If nothing hits, widen to `semantic_search` across the vault.
-3. Follow `[[wikilinks]]` in any hit; they point to the related notes.
-4. Read the full note before quoting; stubs mislead if only skimmed.
-
-### Reporting lookups
-
-- Cite notes as markdown links so they open in VS Code.
-- Flag when a note is stale or contradicts current repo code. **Code and tests
-  win**; the vault is context, not truth.
-- If nothing relevant exists, say so plainly rather than padding.
 
 ## Writing up completed work
 
