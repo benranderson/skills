@@ -13,4 +13,22 @@ My personal agent skills.
 
 ## Install
 
-Install this repo as a plugin from your agent (for example `npx skills@latest add <owner>/skills`, or clone it into your agent's plugin folder). The plugin manifest handles discovery, and each skill is invocable as its own command.
+```bash
+npx skills@latest add benranderson/skills -a github-copilot -a pi -g
+```
+
+Repeat `-a` per agent; comma-separated lists are rejected. Drop `-g` to install into the current project instead of globally. Skills land in `~/.agents/skills/`, which GitHub Copilot reads directly and Pi symlinks to, so there is one copy and no collisions.
+
+Skills are invocable as their own commands, e.g. `/obsidian-lookup`.
+
+To install as a VS Code Copilot plugin instead, add the repo as a marketplace and install `br-skills` from it:
+
+```jsonc
+// settings.json
+"chat.plugins.marketplaces": [
+    "https://github.com/benranderson/skills"
+]
+```
+
+Then run **Manage Plugins** from the Command Palette.
+
